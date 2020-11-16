@@ -56,6 +56,24 @@ body {
 }
 
 .wrap {
-	width: 40%;
+	width: 45%;
 	margin: 3rem auto;
+}
+
+@media only screen and (max-width: 1200px) {
+	.wrap {
+		width: 60%;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.wrap {
+		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.wrap {
+		width: 90%;
+	}
 }
