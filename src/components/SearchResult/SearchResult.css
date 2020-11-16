@@ -1,0 +1,15 @@
+.results {
+	background-color: lightgray;
+	padding: 1px 0px 1px 10px;
+	margin: 10px 0px;
+	border-radius: 5px;
+}
+
+.city-text {
+	float: right;
+	padding-right: 10px;
+}
+
+.results:hover {
+	background-color: rgba(231, 231, 231, 0.904);
+}

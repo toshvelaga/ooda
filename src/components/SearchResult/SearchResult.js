@@ -11,9 +11,7 @@ function SearchResult(props) {
 			>
 				<p>
 					{props.firstName} {props.lastName} | {props.number}
-					<span style={{ float: "right", paddingRight: "10px" }}>
-						{props.city}
-					</span>
+					<span className="city-text">{props.city}</span>
 				</p>
 			</Link>
 		</div>
