@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { URL } from "../../constants/constants";
 import "./ProviderDetail.css";
 
 function ProviderDetail() {
@@ -18,7 +19,7 @@ function ProviderDetail() {
 	const getData = () => {
 		axios
 			.get(
-				`/api/?number=${id}&enumeration_type=&taxonomy_description=&first_name=&use_first_name_alias=&last_name=&organization_name=&address_purpose=&city=&state=&postal_code=&country_code=&limit=&skip=&pretty=on&version=2.1`
+				`${URL}/?number=${id}&enumeration_type=&taxonomy_description=&first_name=&use_first_name_alias=&last_name=&organization_name=&address_purpose=&city=&state=&postal_code=&country_code=&limit=&skip=&pretty=on&version=2.1`
 			)
 			.then((res) => {
 				const results = res.data.results[0];

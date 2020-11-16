@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchResult from "../../components/SearchResult/SearchResult";
 import axios from "axios";
-import { LIMIT } from "../../constants/constants";
+import { LIMIT, URL } from "../../constants/constants";
 import "./Search.css";
 
 function Search() {
@@ -19,7 +19,7 @@ function Search() {
 		} else
 			axios
 				.get(
-					`/api/?number=&enumeration_type=&taxonomy_description=&first_name=${firstName}&use_first_name_alias=&last_name=${lastName}&organization_name=${org}&address_purpose=&city=&state=&postal_code=&country_code=&limit=${LIMIT}&skip=&pretty=on&version=2.1`
+					`${URL}/?number=&enumeration_type=&taxonomy_description=&first_name=${firstName}&use_first_name_alias=&last_name=${lastName}&organization_name=${org}&address_purpose=&city=&state=&postal_code=&country_code=&limit=${LIMIT}&skip=&pretty=on&version=2.1`
 				)
 				.then((res) => {
 					const results = res.data.results;
